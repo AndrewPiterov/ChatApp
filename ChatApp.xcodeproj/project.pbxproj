@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C407F9D91F7582150058D9DA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407F9D81F7582150058D9DA /* FirebaseManager.swift */; };
 		C4CD59CD1F65C5CE002DFED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD59CC1F65C5CE002DFED5 /* AppDelegate.swift */; };
 		C4CD59CF1F65C5CE002DFED5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD59CE1F65C5CE002DFED5 /* LoginController.swift */; };
 		C4CD59D21F65C5CE002DFED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD59D01F65C5CE002DFED5 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		4475E5828907250936207881 /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		54D04C444B944F616D643538 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98C4AC0C6431913C8710FEB /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C407F9D81F7582150058D9DA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		C4CD59C91F65C5CE002DFED5 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CD59CC1F65C5CE002DFED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4CD59CE1F65C5CE002DFED5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		C4CD59CB1F65C5CE002DFED5 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				C407F9D81F7582150058D9DA /* FirebaseManager.swift */,
 				C4CD59E31F65CC51002DFED5 /* ChatApp.entitlements */,
 				C4CD59CC1F65C5CE002DFED5 /* AppDelegate.swift */,
 				C4F6DB0C1F67046A0037410B /* ChatViewController.swift */,
@@ -223,12 +226,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +252,7 @@
 			files = (
 				C4CD59D51F65C5CE002DFED5 /* ChatApp.xcdatamodeld in Sources */,
 				C4CD59CF1F65C5CE002DFED5 /* LoginController.swift in Sources */,
+				C407F9D91F7582150058D9DA /* FirebaseManager.swift in Sources */,
 				C4F6DB0B1F6703E40037410B /* ProfileTableViewController.swift in Sources */,
 				C4F6DB0D1F67046A0037410B /* ChatViewController.swift in Sources */,
 				C4CD59CD1F65C5CE002DFED5 /* AppDelegate.swift in Sources */,

@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextBox: UITextField!
+    @IBOutlet weak var passwordTextBox: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,8 +24,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginBtn_click(_ sender: Any) {
-        self.performSegue(withIdentifier: "showProfile", sender: sender)
+        FirebaseManager.Login(email: usernameTextBox.text!, password: passwordTextBox.text!) { (success: Bool) in
+            if success{
+                self.performSegue(withIdentifier: "showProfile", sender: sender)
+            }
+        }
     }
-
 }
 
