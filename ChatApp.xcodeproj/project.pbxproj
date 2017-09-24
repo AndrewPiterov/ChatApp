@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C407F9D91F7582150058D9DA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407F9D81F7582150058D9DA /* FirebaseManager.swift */; };
+		C4A5F6F11F76E5E30032F547 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5F6F01F76E5E30032F547 /* PostManager.swift */; };
+		C4A5F6F31F7788050032F547 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5F6F21F7788050032F547 /* ChatTableViewCell.swift */; };
+		C4A5F6F51F778C9F0032F547 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5F6F41F778C9F0032F547 /* User.swift */; };
+		C4A5F6F71F77946B0032F547 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5F6F61F77946B0032F547 /* ProfileManager.swift */; };
 		C4CD59CD1F65C5CE002DFED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD59CC1F65C5CE002DFED5 /* AppDelegate.swift */; };
 		C4CD59CF1F65C5CE002DFED5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD59CE1F65C5CE002DFED5 /* LoginController.swift */; };
 		C4CD59D21F65C5CE002DFED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD59D01F65C5CE002DFED5 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 		54D04C444B944F616D643538 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98C4AC0C6431913C8710FEB /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C407F9D81F7582150058D9DA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		C4A5F6F01F76E5E30032F547 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		C4A5F6F21F7788050032F547 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		C4A5F6F41F778C9F0032F547 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C4A5F6F61F77946B0032F547 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		C4CD59C91F65C5CE002DFED5 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CD59CC1F65C5CE002DFED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4CD59CE1F65C5CE002DFED5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 				C4CD59E31F65CC51002DFED5 /* ChatApp.entitlements */,
 				C4CD59CC1F65C5CE002DFED5 /* AppDelegate.swift */,
 				C4F6DB0C1F67046A0037410B /* ChatViewController.swift */,
+				C4A5F6F21F7788050032F547 /* ChatTableViewCell.swift */,
 				C4F6DB0E1F6704870037410B /* SettingsViewController.swift */,
 				C4F6DB0A1F6703E40037410B /* ProfileTableViewController.swift */,
 				C4CD59CE1F65C5CE002DFED5 /* LoginController.swift */,
@@ -104,6 +113,9 @@
 				C4CD59DB1F65C5CE002DFED5 /* Info.plist */,
 				C4CD59D31F65C5CE002DFED5 /* ChatApp.xcdatamodeld */,
 				C4CD59E11F65C633002DFED5 /* GoogleService-Info.plist */,
+				C4A5F6F01F76E5E30032F547 /* PostManager.swift */,
+				C4A5F6F41F778C9F0032F547 /* User.swift */,
+				C4A5F6F61F77946B0032F547 /* ProfileManager.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -253,9 +265,13 @@
 				C4CD59D51F65C5CE002DFED5 /* ChatApp.xcdatamodeld in Sources */,
 				C4CD59CF1F65C5CE002DFED5 /* LoginController.swift in Sources */,
 				C407F9D91F7582150058D9DA /* FirebaseManager.swift in Sources */,
+				C4A5F6F71F77946B0032F547 /* ProfileManager.swift in Sources */,
+				C4A5F6F31F7788050032F547 /* ChatTableViewCell.swift in Sources */,
 				C4F6DB0B1F6703E40037410B /* ProfileTableViewController.swift in Sources */,
 				C4F6DB0D1F67046A0037410B /* ChatViewController.swift in Sources */,
+				C4A5F6F11F76E5E30032F547 /* PostManager.swift in Sources */,
 				C4CD59CD1F65C5CE002DFED5 /* AppDelegate.swift in Sources */,
+				C4A5F6F51F778C9F0032F547 /* User.swift in Sources */,
 				C4F6DB0F1F6704870037410B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

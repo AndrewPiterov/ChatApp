@@ -10,6 +10,9 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var selectedUser: AppUser?
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        PostManager.fillPosts(uid: (FirebaseManager.currentUser?.uid)!, toId: (selectedUser?.uid)!, completion: {(result: String) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        PostManager.posts = []
     }
 
     // MARK: - Table view data source
@@ -30,13 +47,16 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return PostManager.posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChatTableViewCell
      
-     cell.textLabel?.text = "Test"
+        let messageText = cell.messageText
+        messageText?.delegate = self as? UITextViewDelegate
+        let post = PostManager.posts[indexPath.row]
+        cell.messageText.text = post.text
      
      return cell
      }
@@ -53,3 +73,28 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
 
 }
+
+extension ChatTableViewCell: UITextViewDelegate {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

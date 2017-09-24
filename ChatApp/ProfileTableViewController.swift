@@ -10,14 +10,18 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
+    var selectedUser: AppUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //tableView.reloadData()
+        ProfileManager.fillUsers {
+            () in
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,16 +38,22 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return ProfileManager.users.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        cell.textLabel?.text = "Test"
+        let user = ProfileManager.users[indexPath.row]
+        cell.textLabel?.text = user.username
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedUser = ProfileManager.users[indexPath.row]
+        self.performSegue(withIdentifier: "showChatView", sender: self)
     }
  
 
@@ -82,14 +92,19 @@ class ProfileTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showChatView" {
+            if let destinationVC = segue.destination as? ChatViewController{
+                destinationVC.selectedUser = selectedUser
+            }
+        } else if segue.identifier == "showSettingsView"{
+            
+        }
     }
-    */
+    
 
 }
