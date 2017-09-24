@@ -105,49 +105,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username (for new account only)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-Es-7pR">
-                                <rect key="frame" x="16" y="62" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username (for new account only)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-Es-7pR">
+                                <rect key="frame" x="16" y="85" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URX-lr-i86">
-                                <rect key="frame" x="16" y="182" width="343" height="30"/>
+                                <rect key="frame" x="16" y="205" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2En-gj-B21">
-                                <rect key="frame" x="16" y="230" width="343" height="30"/>
+                                <rect key="frame" x="16" y="253" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDk-KV-lnE">
-                                <rect key="frame" x="16" y="278" width="343" height="30"/>
+                                <rect key="frame" x="16" y="301" width="343" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginBtn_click:" destination="kTj-pe-ToR" eventType="touchUpInside" id="ru5-GE-11v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyk-Sd-ssk">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <rect key="frame" x="16" y="341" width="343" height="30"/>
                                 <state key="normal" title="Create account"/>
+                                <connections>
+                                    <action selector="createAcountBtn_click:" destination="kTj-pe-ToR" eventType="touchUpInside" id="U3e-ec-zPG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y14-sv-nGb" firstAttribute="top" secondItem="Jyk-Sd-ssk" secondAttribute="bottom" constant="20" id="25U-zj-1Av"/>
                             <constraint firstItem="JDk-KV-lnE" firstAttribute="leading" secondItem="eYi-eH-iXa" secondAttribute="leadingMargin" id="2XR-KZ-JNU"/>
+                            <constraint firstItem="Jyk-Sd-ssk" firstAttribute="trailing" secondItem="eYi-eH-iXa" secondAttribute="trailingMargin" id="3nD-z1-92s"/>
                             <constraint firstItem="2En-gj-B21" firstAttribute="top" secondItem="URX-lr-i86" secondAttribute="bottom" constant="18" id="5SQ-NF-bLd"/>
-                            <constraint firstItem="Jyk-Sd-ssk" firstAttribute="leading" secondItem="eYi-eH-iXa" secondAttribute="leadingMargin" id="Aop-7C-Gyr"/>
-                            <constraint firstItem="Jyk-Sd-ssk" firstAttribute="trailing" secondItem="eYi-eH-iXa" secondAttribute="trailingMargin" id="HbO-lY-Y03"/>
                             <constraint firstItem="2En-gj-B21" firstAttribute="trailing" secondItem="eYi-eH-iXa" secondAttribute="trailingMargin" id="PA2-ie-5po"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5Bj-Es-7pR" secondAttribute="leading" id="PNx-ES-bHT"/>
                             <constraint firstItem="JDk-KV-lnE" firstAttribute="top" secondItem="2En-gj-B21" secondAttribute="bottom" constant="18" id="XYi-Be-H7t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Bj-Es-7pR" secondAttribute="trailing" id="Yyd-fh-Fo0"/>
+                            <constraint firstItem="Jyk-Sd-ssk" firstAttribute="leading" secondItem="eYi-eH-iXa" secondAttribute="leadingMargin" id="aki-di-o5i"/>
                             <constraint firstItem="2En-gj-B21" firstAttribute="leading" secondItem="eYi-eH-iXa" secondAttribute="leadingMargin" id="eh9-BE-0tI"/>
-                            <constraint firstItem="5Bj-Es-7pR" firstAttribute="top" secondItem="Xwh-yE-uRa" secondAttribute="bottom" constant="42" id="loc-7g-90N"/>
+                            <constraint firstItem="5Bj-Es-7pR" firstAttribute="top" secondItem="Xwh-yE-uRa" secondAttribute="bottom" constant="65" id="loc-7g-90N"/>
+                            <constraint firstItem="Jyk-Sd-ssk" firstAttribute="top" secondItem="JDk-KV-lnE" secondAttribute="bottom" constant="10" id="nBj-sS-HHN"/>
                             <constraint firstItem="URX-lr-i86" firstAttribute="leading" secondItem="eYi-eH-iXa" secondAttribute="leadingMargin" id="pXu-iH-ati"/>
                             <constraint firstItem="URX-lr-i86" firstAttribute="trailing" secondItem="eYi-eH-iXa" secondAttribute="trailingMargin" id="plt-hu-WrX"/>
                             <constraint firstItem="JDk-KV-lnE" firstAttribute="trailing" secondItem="eYi-eH-iXa" secondAttribute="trailingMargin" id="x4h-SP-31B"/>
@@ -155,8 +158,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordTextBox" destination="2En-gj-B21" id="XON-Js-vNo"/>
-                        <outlet property="usernameTextBox" destination="URX-lr-i86" id="SNg-op-uPp"/>
+                        <outlet property="email" destination="URX-lr-i86" id="SNg-op-uPp"/>
+                        <outlet property="password" destination="2En-gj-B21" id="XON-Js-vNo"/>
+                        <outlet property="username" destination="5Bj-Es-7pR" id="hhb-og-Jh0"/>
                         <segue destination="JRx-Rp-UkT" kind="show" identifier="showProfile" id="UYq-ZY-BWg"/>
                     </connections>
                 </viewController>

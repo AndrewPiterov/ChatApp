@@ -10,8 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var usernameTextBox: UITextField!
-    @IBOutlet weak var passwordTextBox: UITextField!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,17 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginBtn_click(_ sender: Any) {
-        FirebaseManager.Login(email: usernameTextBox.text!, password: passwordTextBox.text!) { (success: Bool) in
+        FirebaseManager.Login(email: email.text!, password: password.text!) { (success: Bool) in
             if success{
+                self.performSegue(withIdentifier: "showProfile", sender: sender)
+            }
+        }
+    }
+    @IBAction func createAcountBtn_click(_ sender: Any) {
+        FirebaseManager.CreateAccount(email: email.text!, username: username.text!, password: password.text!){
+            (result: String)
+            in
+            DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "showProfile", sender: sender)
             }
         }
