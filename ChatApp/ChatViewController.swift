@@ -12,12 +12,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var selectedUser: AppUser?
     @IBOutlet weak var tableView: UITableView!
+    var cellHeight = 44
     
     @IBOutlet weak var messageText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.estimatedRowHeight = 88
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,31 +58,27 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChatTableViewCell
-     
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChatTableViewCell
+
         let messageText = cell.messageText
-        messageText?.delegate = self as? UITextViewDelegate
+        messageText?.delegate = self
+        cellHeight = Int((messageText?.contentSize.height)!)
         let post = PostManager.posts[indexPath.row]
         cell.messageText.text = post.text
-     
-     return cell
+
+        return cell
      }
- 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension ChatTableViewCell: UITextViewDelegate {
-    
+extension ChatViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let currentOffset = tableView.contentOffset
+        UIView.setAnimationsEnabled(false)
+        tableView.beginUpdates()
+        tableView.endUpdates()
+        UIView.setAnimationsEnabled(true)
+        tableView.setContentOffset(currentOffset, animated: false)
+    }
 }
 
 
