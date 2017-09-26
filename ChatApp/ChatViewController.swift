@@ -13,6 +13,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var selectedUser: AppUser?
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var messageText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +39,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         PostManager.posts = []
     }
 
+    @IBAction func sendBtn_click(_ sender: Any) {
+        PostManager.sendPost(username: (selectedUser?.uid)!, text: messageText.text!, toId: (selectedUser?.uid)!, fromId: (FirebaseManager.currentUser?.uid)!)
+        messageText.text = ""
+    }
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {

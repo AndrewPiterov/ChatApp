@@ -16,6 +16,17 @@ class PostManager: NSObject {
     static let databaseRef = Database.database().reference()
     static var posts = [Post]()
     
+    static func sendPost(username: String, text: String, toId: String, fromId: String){
+        if text != "" {
+            let uid = Auth.auth().currentUser?.uid
+            let post = ["uid": uid!,
+                        "username": username,
+                        "text": text,
+                        "toId": toId]
+            databaseRef.child("posts").childByAutoId().setValue(post)
+        }
+    }
+    
     static func fillPosts(uid: String, toId: String, completion: @escaping (_ result: String) -> Void){
         posts = []
         let allPost = databaseRef.child("posts")
