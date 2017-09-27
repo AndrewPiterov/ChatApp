@@ -256,11 +256,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os3-1O-6IQ">
                                 <rect key="frame" x="16" y="355" width="343" height="30"/>
                                 <state key="normal" title="Get Photo"/>
+                                <connections>
+                                    <action selector="getPhotoBtn_click:" destination="ORR-Mg-4EB" eventType="touchUpInside" id="s8i-Ky-WrI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMT-y9-oIg">
                                 <rect key="frame" x="16" y="430" width="343" height="30"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateBtn_click:" destination="ORR-Mg-4EB" eventType="touchUpInside" id="YBE-9W-zs2"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMt-KP-hMM">
+                                <rect key="frame" x="68" y="299" width="239" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -269,16 +281,23 @@
                             <constraint firstItem="os3-1O-6IQ" firstAttribute="top" secondItem="QiI-L1-1Zz" secondAttribute="bottom" constant="100" id="MQj-sU-Tur"/>
                             <constraint firstItem="QiI-L1-1Zz" firstAttribute="leading" secondItem="C24-UX-9AM" secondAttribute="leadingMargin" constant="52" id="cEC-sq-zC3"/>
                             <constraint firstItem="TMT-y9-oIg" firstAttribute="leading" secondItem="C24-UX-9AM" secondAttribute="leadingMargin" id="cpu-Du-PiR"/>
+                            <constraint firstAttribute="trailing" secondItem="tMt-KP-hMM" secondAttribute="trailing" constant="68" id="ni3-pE-vW9"/>
+                            <constraint firstItem="tMt-KP-hMM" firstAttribute="top" secondItem="QiI-L1-1Zz" secondAttribute="bottom" constant="44" id="o79-W8-125"/>
                             <constraint firstItem="os3-1O-6IQ" firstAttribute="leading" secondItem="C24-UX-9AM" secondAttribute="leadingMargin" id="sKo-La-Rme"/>
+                            <constraint firstItem="tMt-KP-hMM" firstAttribute="leading" secondItem="C24-UX-9AM" secondAttribute="leading" constant="68" id="tUQ-zl-gLc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="os3-1O-6IQ" secondAttribute="trailing" id="tzq-IF-H4s"/>
                             <constraint firstItem="TMT-y9-oIg" firstAttribute="top" secondItem="os3-1O-6IQ" secondAttribute="bottom" constant="45" id="wol-ZB-CnN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TMT-y9-oIg" secondAttribute="trailing" id="wyG-o6-E2i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="QiI-L1-1Zz" id="j3N-F7-lTU"/>
+                        <outlet property="username" destination="tMt-KP-hMM" id="ZYJ-Eb-tOf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k36-bv-63s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="869"/>
+            <point key="canvasLocation" x="29.600000000000001" y="868.51574212893559"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pvk-j3-WTk">

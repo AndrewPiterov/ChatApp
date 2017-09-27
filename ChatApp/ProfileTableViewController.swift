@@ -49,7 +49,7 @@ class ProfileTableViewController: UITableViewController {
         cell.cellname.text = user.username
         
         if user.profileImageUrl != "" {
-            // user.getProfileImage()
+            cell.cellimage.image = user.getProfileImage()
         } else {
             cell.cellimage.image = #imageLiteral(resourceName: "profile")
         }
@@ -103,14 +103,12 @@ class ProfileTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showChatView" {
-            if let destinationVC = segue.destination as? ChatViewController{
+        if segue.identifier == "showChatView",
+            let destinationVC = segue.destination as? ChatViewController{
                 destinationVC.selectedUser = selectedUser
-            }
-        } else if segue.identifier == "showSettingsView"{
-            
+        } else if segue.identifier == "showSettingsView",
+            let destinationVC = segue.destination as? SettingsViewController{
+            destinationVC.selectedUser = ProfileManager.getUser(uid: FirebaseManager.currentUserId)
         }
     }
-    
-
 }
