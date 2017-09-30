@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C407F9D91F7582150058D9DA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407F9D81F7582150058D9DA /* FirebaseManager.swift */; };
+		C43F3AAF1F7F7976009BFED3 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43F3AAE1F7F7976009BFED3 /* RemoteConfigManager.swift */; };
 		C489D9B31F7AD0A700E36B66 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C489D9B21F7AD0A700E36B66 /* ProfileTableViewCell.swift */; };
 		C4A5F6F11F76E5E30032F547 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5F6F01F76E5E30032F547 /* PostManager.swift */; };
 		C4A5F6F31F7788050032F547 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5F6F21F7788050032F547 /* ChatTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 		54D04C444B944F616D643538 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98C4AC0C6431913C8710FEB /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C407F9D81F7582150058D9DA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		C43F3AAE1F7F7976009BFED3 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
 		C489D9B21F7AD0A700E36B66 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		C4A5F6F01F76E5E30032F547 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 		C4A5F6F21F7788050032F547 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C4A5F6F01F76E5E30032F547 /* PostManager.swift */,
 				C4A5F6F41F778C9F0032F547 /* User.swift */,
 				C4A5F6F61F77946B0032F547 /* ProfileManager.swift */,
+				C43F3AAE1F7F7976009BFED3 /* RemoteConfigManager.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -250,6 +254,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -270,6 +275,7 @@
 				C407F9D91F7582150058D9DA /* FirebaseManager.swift in Sources */,
 				C4A5F6F71F77946B0032F547 /* ProfileManager.swift in Sources */,
 				C4A5F6F31F7788050032F547 /* ChatTableViewCell.swift in Sources */,
+				C43F3AAF1F7F7976009BFED3 /* RemoteConfigManager.swift in Sources */,
 				C4F6DB0B1F6703E40037410B /* ProfileTableViewController.swift in Sources */,
 				C4F6DB0D1F67046A0037410B /* ChatViewController.swift in Sources */,
 				C4A5F6F11F76E5E30032F547 /* PostManager.swift in Sources */,

@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var updateBtn: UIButton!
     
     var selectedUser: AppUser?
     
@@ -24,6 +25,7 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         username.text = selectedUser?.username
+        updateBtn.setTitle(RemoteConfigManager.remoteConfigValues["photoButtonUpdate"], for: .normal)
     }
 
     override func didReceiveMemoryWarning() {

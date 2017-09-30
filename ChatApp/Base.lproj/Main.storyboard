@@ -129,7 +129,6 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDk-KV-lnE">
                                 <rect key="frame" x="16" y="301" width="343" height="30"/>
-                                <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginBtn_click:" destination="kTj-pe-ToR" eventType="touchUpInside" id="ru5-GE-11v"/>
                                 </connections>
@@ -163,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="URX-lr-i86" id="SNg-op-uPp"/>
+                        <outlet property="loginBtn" destination="JDk-KV-lnE" id="Lue-Wh-1YJ"/>
                         <outlet property="password" destination="2En-gj-B21" id="XON-Js-vNo"/>
                         <outlet property="username" destination="5Bj-Es-7pR" id="hhb-og-Jh0"/>
                         <segue destination="JRx-Rp-UkT" kind="show" identifier="showProfile" id="UYq-ZY-BWg"/>
@@ -292,6 +292,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="QiI-L1-1Zz" id="j3N-F7-lTU"/>
+                        <outlet property="updateBtn" destination="TMT-y9-oIg" id="ozh-rK-ZA6"/>
                         <outlet property="username" destination="tMt-KP-hMM" id="ZYJ-Eb-tOf"/>
                     </connections>
                 </viewController>
